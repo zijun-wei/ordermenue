@@ -3,7 +3,8 @@
 (由于微信支付需要支付号（支付宝也需要认证），所以本演示仅仅只针对功能展示，并没有链接微信模块（支付宝模块），具体连接模块可参考代码)  
 *买家端入口：http://119.3.105.163/*  
 （由于微信登陆，需要开放账号，所以本演示仅仅提供账号密码登陆，具体微信登陆流程，请参考代码）  
-*卖家端入口：http://119.3.105.163/sell/seller/order/list（为了避免个人服务器成为某些文化的交流地，不提供注册服务，需要登陆者可加本人微信：weizijuntongxue）*  
+*卖家端入口：http://119.3.105.163/sell/seller/order/list  
+（为了避免个人服务器成为某些文化的交流地，不提供注册服务，需要登陆者可加本人微信：weizijuntongxue）*  
 
 ## 技术栈
 springboot+jpa（hibernate）+redis+freemaker   
@@ -29,7 +30,7 @@ Java (JDK8+)
 Maven  
 
 ### 修改文件（application.yml）
-#'''
+#```
 spring:  
   datasource:  
     driver-class-name: com.mysql.cj.jdbc.Driver（驱动）  
@@ -69,7 +70,7 @@ wechat(参数需要用于公众账号，支付账号，开放账号):
   mchKey: 06C56A89949D617xxxxxxxxxxx  
   keyPath: /var/weixin_cert/h5.p12  
   notifyUrl: http://zijunsell.natapp4.cc/sell/pay/notify（支付验证地址）
-#'''
+#```
 
 ### 优化
 已提供基于redis缓存优化，若扩展为分布式，已完成基于redis的token身份验证，并提供基于SpringCloud的分布式demo  
