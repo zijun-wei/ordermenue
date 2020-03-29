@@ -1,16 +1,14 @@
-﻿spring:
+spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.101.211.225:3306/ordermenue?serverTimezone=UTC&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql:///ordermenue?serverTimezone=UTC&characterEncoding=utf-8&useSSL=false
     username: root
-    password: xxxxxxx
+    password: 123456
 
-  #配置模板
   freemarker:
     template-loader-path: classpath:/templates
     suffix: .ftl
 
-  #配置hibernate,表已经建立
   jpa:
     show-sql: true
     hibernate:
@@ -23,24 +21,19 @@
 #  jackson:
 #    default-property-inclusion: non_null
 
-
 server:
   servlet:
     context-path: /sell
 
-#配置日志级别及位置
 logging:
   level:
     cn.zijun.ordermenue.dataobject.mapper: trace
   file:
     path: D://spring.log
 
-#若不使用jpa，想使用mybatis，可在此配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 
-
-#wechat相关参数（对应的公众号，支付号，开放号）
 wechat:
   mpAppId: wx70612f74c698c608
   mpAppSecret: d1a858b884c75715048d3b4908dd8776

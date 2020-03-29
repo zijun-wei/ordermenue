@@ -33,7 +33,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
 
     @Override
-    @Cacheable(key = "123")
+    @Cacheable(key = "#productId")
     public ProductInfo findOne(String productId) {
         Optional<ProductInfo> option = repository.findById(productId);
         if(option.isPresent()){
@@ -53,7 +53,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     }
 
     @Override
-    @CachePut(key = "123")
+    @CachePut(key = "#productInfo.productId")
     @Transactional(rollbackFor = Exception.class)
     public ProductInfo save(ProductInfo productInfo) {
         return repository.save(productInfo);

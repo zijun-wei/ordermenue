@@ -1,4 +1,3 @@
-#配置logback
 logging:
   pattern:
     console: "%d - %msg%n"

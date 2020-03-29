@@ -39,6 +39,7 @@ public class SellerUserController {
     @Autowired
     private StringRedisTemplate redisTemplate;
 
+
 //    @GetMapping("/login")
 //    public ModelAndView login(@RequestParam("openid")String openid,
 //                              Map<String,Object>map,

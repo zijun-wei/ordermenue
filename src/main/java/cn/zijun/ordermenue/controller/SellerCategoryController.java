@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -44,7 +45,7 @@ public class SellerCategoryController {
         }
         return new ModelAndView("category/index",map);
     }
-    @GetMapping("/save")
+    @PostMapping("/save")
     public ModelAndView save(@Valid CategoryForm form,
                              BindingResult bindingResult,
                              Map<String,Object> map){
@@ -60,12 +61,12 @@ public class SellerCategoryController {
             }
             BeanUtils.copyProperties(form, productCategory);
             categoryService.save(productCategory);
-        }catch (SellException e){
+        }catch (Exception e){
             map.put("msg",e.getMessage());
             map.put("url","/sell/seller/category/index");
             return new ModelAndView("common/error",map);
         }
-        map.put("url","category/list");
+        map.put("url","/sell/seller/category/list");
         return new ModelAndView("common/success",map);
     }
 }

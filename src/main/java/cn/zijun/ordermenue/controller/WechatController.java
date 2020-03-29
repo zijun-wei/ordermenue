@@ -31,7 +31,7 @@ public class WechatController {
     @Autowired
     private WxMpService wxMpService;
 
-    private final String returnUri="http://192.168.1.105/#/";
+    private final String returnUri="http://119.3.105.163/#/";
 
 //    @GetMapping("/authorize")
 //    public String authorize(@RequestParam("returnUrl")String returnUrl) {

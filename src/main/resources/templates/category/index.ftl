@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-md-12 column">
-                    <form role="form" action="/sell/seller/category/save">
+                    <form role="form" action="/sell/seller/category/save" method="post">
                         <div class="form-group">
                             <label>名称</label>
                             <input name="categoryName" class="form-control" type="text" value="${(productCategory.categoryName)!''}"/>
@@ -18,7 +18,7 @@
                             <label>Type</label>
                             <input name="categoryType" class="form-control" type="number" value="${(productCategory.categoryType)!''}"/>
                         </div>
-                        <input hidden type="text" name="productId" value="${(productCategory.categoryId)!''}">
+                        <input hidden type="text" name="categoryId" value="${(productCategory.categoryId)!''}">
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                 </div>

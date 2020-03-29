@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-md-12 column">
-                    <form role="form" action="/sell/seller/product/save">
+                    <form role="form" action="/sell/seller/product/save" method="post">
                         <div class="form-group">
                             <label>名称</label>
                             <input name="productName" class="form-control" type="text" value="${(productInfo.productName)!''}"/>
@@ -32,7 +32,7 @@
                             <input name="productIcon" class="form-control" type="text" value="${(productInfo.productIcon)!''}"/>
                         </div>
                         <div class="form-group">
-                            <label>图片</label>
+                            <label>类别</label>
                             <select name="categoryType" class="form-control">
                                 <#list categoryList as category>
                                     <option value="${category.categoryType}"

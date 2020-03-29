@@ -1,7 +1,5 @@
 package cn.zijun.ordermenue.exception;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 /**
  * @Title ResponseBankException
  * @Description
