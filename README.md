@@ -74,4 +74,4 @@ wechat(参数需要用于公众账号，支付账号，开放账号):
 
 ### 优化
 已提供基于redis缓存优化，若扩展为分布式，已完成基于redis的token身份验证，并提供基于SpringCloud的分布式demo(参考ordermenue-SpringCloud仓库)  
-若需要秒杀服务，提供了秒杀的一套解决方法（参考sec_kill_demo仓库ps：一般普通场景下，外卖很少出现秒杀）  
+若需要秒杀服务，提供了秒杀的一套解决方法（参考second_kill_demo仓库ps：一般普通场景下，外卖很少出现秒杀）  
